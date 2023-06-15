@@ -1,2 +1,2 @@
-# NERDSS_on_DNA_colloid
+# DNA_coated_colloid
 Use NERDSS to model DNA colloid 
