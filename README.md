@@ -1,4 +1,4 @@
 # DNA_coated_colloid
-##Project Description
+## Project Description
 
 Use NERDSS to model DNA colloid aggregation
