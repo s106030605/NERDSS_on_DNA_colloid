@@ -1,0 +1,8028 @@
+# Input file
+
+start parameters
+    nItr = 360000000      #3,600,000 iteration *0.001s = 3,600s = 60m = 1hr
+    timeStep = 20000  # 1,000us=1ms=0.001s
+    timeWrite = 50  # every 1000 show message in simulation
+    trajWrite = 3000  # Ouput trajectory Ovito
+    pdbWrite = 3000  # output pdb
+    checkPoint = 15000
+    restartWrite = 50  # every 600,000 write a restartfile
+    overlapSepLimit = 900.0
+
+end parameters
+
+start boundaries
+    WaterBox = [100000,100000,100000] #nm   #for 100,100,100 0.2wt% we have 2000particles 
+end boundaries
+
+#30000,30000,100000  1800
+#100000,10000,100000  2000
+#100000,10000,1000  20
+#1000000,100000,10000  20,000   
+#10000000,1000000,100000  20,000,000    #1cm 1mm 100um 
+#pseudo 2d  we can only narrow down 2d 
+ 
+start molecules  #2014 as 01wt% for (100,000)^3
+    A : 2014  
+    B : 2014
+    C : 0
+end molecules
+
+
+
+start reactions
+
+    ########AA
+    ###1aa
+    A(a) + A(a) <-> A(a!1).A(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###2ab
+    A(a) + A(b) <-> A(a!1).A(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###3ac
+    A(a) + A(c) <-> A(a!1).A(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###4ad
+    A(a) + A(d) <-> A(a!1).A(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###5ae
+    A(a) + A(e) <-> A(a!1).A(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###6af
+    A(a) + A(f) <-> A(a!1).A(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7ag
+    A(a) + A(g) <-> A(a!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8ah
+    A(a) + A(h) <-> A(a!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9ai
+    A(a) + A(i) <-> A(a!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10aj
+    A(a) + A(j) <-> A(a!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11ak
+    A(a) + A(k) <-> A(a!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12al
+    A(a) + A(l) <-> A(a!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###2bb
+    A(b) + A(b) <-> A(b!1).A(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###3bc
+    A(b) + A(c) <-> A(b!1).A(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###4bd
+    A(b) + A(d) <-> A(b!1).A(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###5be
+    A(b) + A(e) <-> A(b!1).A(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###6bf
+    A(b) + A(f) <-> A(b!1).A(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7bg
+    A(b) + A(g) <-> A(b!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8bh
+    A(b) + A(h) <-> A(b!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9bi
+    A(b) + A(i) <-> A(b!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10bj
+    A(b) + A(j) <-> A(b!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11bk
+    A(b) + A(k) <-> A(b!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12bl
+    A(b) + A(l) <-> A(b!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###3cc
+    A(c) + A(c) <-> A(c!1).A(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###4cd
+    A(c) + A(d) <-> A(c!1).A(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###5ce
+    A(c) + A(e) <-> A(c!1).A(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###6cf
+    A(c) + A(f) <-> A(c!1).A(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7cg
+    A(c) + A(g) <-> A(c!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8ch
+    A(c) + A(h) <-> A(c!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9ci
+    A(c) + A(i) <-> A(c!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10cj
+    A(c) + A(j) <-> A(c!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11ck
+    A(c) + A(k) <-> A(c!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12cl
+    A(c) + A(l) <-> A(c!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###4dd
+    A(d) + A(d) <-> A(d!1).A(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###5de
+    A(d) + A(e) <-> A(d!1).A(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###6df
+    A(d) + A(f) <-> A(d!1).A(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7dg
+    A(d) + A(g) <-> A(d!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8dh
+    A(d) + A(h) <-> A(d!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9di
+    A(d) + A(i) <-> A(d!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10dj
+    A(d) + A(j) <-> A(d!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11dk
+    A(d) + A(k) <-> A(d!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12dl
+    A(d) + A(l) <-> A(d!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###5ee
+    A(e) + A(e) <-> A(e!1).A(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###6ef
+    A(e) + A(f) <-> A(e!1).A(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7eg
+    A(e) + A(g) <-> A(e!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8eh
+    A(e) + A(h) <-> A(e!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9ei
+    A(e) + A(i) <-> A(e!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10ej
+    A(e) + A(j) <-> A(e!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11ek
+    A(e) + A(k) <-> A(e!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12el
+    A(e) + A(l) <-> A(e!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###6ff
+    A(f) + A(f) <-> A(f!1).A(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7fg
+    A(f) + A(g) <-> A(f!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8fh
+    A(f) + A(h) <-> A(f!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9fi
+    A(f) + A(i) <-> A(f!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10fj
+    A(f) + A(j) <-> A(f!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11fk
+    A(f) + A(k) <-> A(f!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12fl
+    A(f) + A(l) <-> A(f!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###7gg
+    A(g) + A(g) <-> A(g!1).A(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8gh
+    A(g) + A(h) <-> A(g!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9gi
+    A(g) + A(i) <-> A(g!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10gj
+    A(g) + A(j) <-> A(g!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11gk
+    A(g) + A(k) <-> A(g!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12gl
+    A(g) + A(l) <-> A(g!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###8hh
+    A(h) + A(h) <-> A(h!1).A(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9hi
+    A(h) + A(i) <-> A(h!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10hj
+    A(h) + A(j) <-> A(h!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11hk
+    A(h) + A(k) <-> A(h!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12hl
+    A(h) + A(l) <-> A(h!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###9ii
+    A(i) + A(i) <-> A(i!1).A(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10ij
+    A(i) + A(j) <-> A(i!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11ik
+    A(i) + A(k) <-> A(i!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12il
+    A(i) + A(l) <-> A(i!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###10jj
+    A(j) + A(j) <-> A(j!1).A(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11jk
+    A(j) + A(k) <-> A(j!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12jl
+    A(j) + A(l) <-> A(j!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###11kk
+    A(k) + A(k) <-> A(k!1).A(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12kl
+    A(k) + A(l) <-> A(k!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AA
+    ###12ll
+    A(l) + A(l) <-> A(l!1).A(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1aa
+    A(a) + B(a) <-> A(a!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2ab
+    A(a) + B(b) <-> A(a!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3ac
+    A(a) + B(c) <-> A(a!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4ad
+    A(a) + B(d) <-> A(a!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5ae
+    A(a) + B(e) <-> A(a!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6af
+    A(a) + B(f) <-> A(a!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7ag
+    A(a) + B(g) <-> A(a!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8ah
+    A(a) + B(h) <-> A(a!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9ai
+    A(a) + B(i) <-> A(a!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10aj
+    A(a) + B(j) <-> A(a!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11ak
+    A(a) + B(k) <-> A(a!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12al
+    A(a) + B(l) <-> A(a!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ba
+    A(b) + B(a) <-> A(b!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2bb
+    A(b) + B(b) <-> A(b!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3bc
+    A(b) + B(c) <-> A(b!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4bd
+    A(b) + B(d) <-> A(b!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5be
+    A(b) + B(e) <-> A(b!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6bf
+    A(b) + B(f) <-> A(b!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7bg
+    A(b) + B(g) <-> A(b!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8bh
+    A(b) + B(h) <-> A(b!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9bi
+    A(b) + B(i) <-> A(b!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10bj
+    A(b) + B(j) <-> A(b!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11bk
+    A(b) + B(k) <-> A(b!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12bl
+    A(b) + B(l) <-> A(b!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ca
+    A(c) + B(a) <-> A(c!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2cb
+    A(c) + B(b) <-> A(c!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3cc
+    A(c) + B(c) <-> A(c!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4cd
+    A(c) + B(d) <-> A(c!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5ce
+    A(c) + B(e) <-> A(c!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6cf
+    A(c) + B(f) <-> A(c!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7cg
+    A(c) + B(g) <-> A(c!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8ch
+    A(c) + B(h) <-> A(c!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9ci
+    A(c) + B(i) <-> A(c!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10cj
+    A(c) + B(j) <-> A(c!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11ck
+    A(c) + B(k) <-> A(c!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12cl
+    A(c) + B(l) <-> A(c!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1da
+    A(d) + B(a) <-> A(d!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2db
+    A(d) + B(b) <-> A(d!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3dc
+    A(d) + B(c) <-> A(d!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4dd
+    A(d) + B(d) <-> A(d!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5de
+    A(d) + B(e) <-> A(d!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6df
+    A(d) + B(f) <-> A(d!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7dg
+    A(d) + B(g) <-> A(d!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8dh
+    A(d) + B(h) <-> A(d!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9di
+    A(d) + B(i) <-> A(d!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10dj
+    A(d) + B(j) <-> A(d!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11dk
+    A(d) + B(k) <-> A(d!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12dl
+    A(d) + B(l) <-> A(d!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ea
+    A(e) + B(a) <-> A(e!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2eb
+    A(e) + B(b) <-> A(e!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3ec
+    A(e) + B(c) <-> A(e!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4ed
+    A(e) + B(d) <-> A(e!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5ee
+    A(e) + B(e) <-> A(e!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6ef
+    A(e) + B(f) <-> A(e!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7eg
+    A(e) + B(g) <-> A(e!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8eh
+    A(e) + B(h) <-> A(e!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9ei
+    A(e) + B(i) <-> A(e!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10ej
+    A(e) + B(j) <-> A(e!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11ek
+    A(e) + B(k) <-> A(e!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12el
+    A(e) + B(l) <-> A(e!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1fa
+    A(f) + B(a) <-> A(f!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2fb
+    A(f) + B(b) <-> A(f!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3fc
+    A(f) + B(c) <-> A(f!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4fd
+    A(f) + B(d) <-> A(f!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5fe
+    A(f) + B(e) <-> A(f!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6ff
+    A(f) + B(f) <-> A(f!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7fg
+    A(f) + B(g) <-> A(f!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8fh
+    A(f) + B(h) <-> A(f!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9fi
+    A(f) + B(i) <-> A(f!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10fj
+    A(f) + B(j) <-> A(f!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11fk
+    A(f) + B(k) <-> A(f!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12fl
+    A(f) + B(l) <-> A(f!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ga
+    A(g) + B(a) <-> A(g!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2gb
+    A(g) + B(b) <-> A(g!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3gc
+    A(g) + B(c) <-> A(g!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4gd
+    A(g) + B(d) <-> A(g!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5ge
+    A(g) + B(e) <-> A(g!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6gf
+    A(g) + B(f) <-> A(g!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7gg
+    A(g) + B(g) <-> A(g!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8gh
+    A(g) + B(h) <-> A(g!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9gi
+    A(g) + B(i) <-> A(g!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10gj
+    A(g) + B(j) <-> A(g!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11gk
+    A(g) + B(k) <-> A(g!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12gl
+    A(g) + B(l) <-> A(g!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ha
+    A(h) + B(a) <-> A(h!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2hb
+    A(h) + B(b) <-> A(h!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3hc
+    A(h) + B(c) <-> A(h!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4hd
+    A(h) + B(d) <-> A(h!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5he
+    A(h) + B(e) <-> A(h!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6hf
+    A(h) + B(f) <-> A(h!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7hg
+    A(h) + B(g) <-> A(h!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8hh
+    A(h) + B(h) <-> A(h!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9hi
+    A(h) + B(i) <-> A(h!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10hj
+    A(h) + B(j) <-> A(h!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11hk
+    A(h) + B(k) <-> A(h!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12hl
+    A(h) + B(l) <-> A(h!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ia
+    A(i) + B(a) <-> A(i!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2ib
+    A(i) + B(b) <-> A(i!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3ic
+    A(i) + B(c) <-> A(i!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4id
+    A(i) + B(d) <-> A(i!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5ie
+    A(i) + B(e) <-> A(i!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6if
+    A(i) + B(f) <-> A(i!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7ig
+    A(i) + B(g) <-> A(i!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8ih
+    A(i) + B(h) <-> A(i!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9ii
+    A(i) + B(i) <-> A(i!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10ij
+    A(i) + B(j) <-> A(i!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11ik
+    A(i) + B(k) <-> A(i!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12il
+    A(i) + B(l) <-> A(i!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ja
+    A(j) + B(a) <-> A(j!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2jb
+    A(j) + B(b) <-> A(j!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3jc
+    A(j) + B(c) <-> A(j!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4jd
+    A(j) + B(d) <-> A(j!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5je
+    A(j) + B(e) <-> A(j!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6jf
+    A(j) + B(f) <-> A(j!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7jg
+    A(j) + B(g) <-> A(j!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8jh
+    A(j) + B(h) <-> A(j!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9ji
+    A(j) + B(i) <-> A(j!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10jj
+    A(j) + B(j) <-> A(j!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11jk
+    A(j) + B(k) <-> A(j!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12jl
+    A(j) + B(l) <-> A(j!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1ka
+    A(k) + B(a) <-> A(k!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2kb
+    A(k) + B(b) <-> A(k!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3kc
+    A(k) + B(c) <-> A(k!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4kd
+    A(k) + B(d) <-> A(k!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5ke
+    A(k) + B(e) <-> A(k!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6kf
+    A(k) + B(f) <-> A(k!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7kg
+    A(k) + B(g) <-> A(k!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8kh
+    A(k) + B(h) <-> A(k!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9ki
+    A(k) + B(i) <-> A(k!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10kj
+    A(k) + B(j) <-> A(k!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11kk
+    A(k) + B(k) <-> A(k!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12kl
+    A(k) + B(l) <-> A(k!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###1la
+    A(l) + B(a) <-> A(l!1).B(a!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###2lb
+    A(l) + B(b) <-> A(l!1).B(b!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###3lc
+    A(l) + B(c) <-> A(l!1).B(c!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###4ld
+    A(l) + B(d) <-> A(l!1).B(d!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###5le
+    A(l) + B(e) <-> A(l!1).B(e!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###6lf
+    A(l) + B(f) <-> A(l!1).B(f!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###7lg
+    A(l) + B(g) <-> A(l!1).B(g!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###8lh
+    A(l) + B(h) <-> A(l!1).B(h!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###9li
+    A(l) + B(i) <-> A(l!1).B(i!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###10lj
+    A(l) + B(j) <-> A(l!1).B(j!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###11lk
+    A(l) + B(k) <-> A(l!1).B(k!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AB
+    ###12ll
+    A(l) + B(l) <-> A(l!1).B(l!1)
+    onRate3Dka = 10  # AB
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###1aa
+    B(a) + B(a) <-> B(a!1).B(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###2ab
+    B(a) + B(b) <-> B(a!1).B(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###3ac
+    B(a) + B(c) <-> B(a!1).B(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###4ad
+    B(a) + B(d) <-> B(a!1).B(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###5ae
+    B(a) + B(e) <-> B(a!1).B(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###6af
+    B(a) + B(f) <-> B(a!1).B(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7ag
+    B(a) + B(g) <-> B(a!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8ah
+    B(a) + B(h) <-> B(a!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9ai
+    B(a) + B(i) <-> B(a!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10aj
+    B(a) + B(j) <-> B(a!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11ak
+    B(a) + B(k) <-> B(a!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12al
+    B(a) + B(l) <-> B(a!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###2bb
+    B(b) + B(b) <-> B(b!1).B(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###3bc
+    B(b) + B(c) <-> B(b!1).B(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###4bd
+    B(b) + B(d) <-> B(b!1).B(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###5be
+    B(b) + B(e) <-> B(b!1).B(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###6bf
+    B(b) + B(f) <-> B(b!1).B(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7bg
+    B(b) + B(g) <-> B(b!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8bh
+    B(b) + B(h) <-> B(b!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9bi
+    B(b) + B(i) <-> B(b!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10bj
+    B(b) + B(j) <-> B(b!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11bk
+    B(b) + B(k) <-> B(b!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12bl
+    B(b) + B(l) <-> B(b!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###3cc
+    B(c) + B(c) <-> B(c!1).B(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###4cd
+    B(c) + B(d) <-> B(c!1).B(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###5ce
+    B(c) + B(e) <-> B(c!1).B(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###6cf
+    B(c) + B(f) <-> B(c!1).B(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7cg
+    B(c) + B(g) <-> B(c!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8ch
+    B(c) + B(h) <-> B(c!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9ci
+    B(c) + B(i) <-> B(c!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10cj
+    B(c) + B(j) <-> B(c!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11ck
+    B(c) + B(k) <-> B(c!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12cl
+    B(c) + B(l) <-> B(c!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###4dd
+    B(d) + B(d) <-> B(d!1).B(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###5de
+    B(d) + B(e) <-> B(d!1).B(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###6df
+    B(d) + B(f) <-> B(d!1).B(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7dg
+    B(d) + B(g) <-> B(d!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8dh
+    B(d) + B(h) <-> B(d!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9di
+    B(d) + B(i) <-> B(d!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10dj
+    B(d) + B(j) <-> B(d!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11dk
+    B(d) + B(k) <-> B(d!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12dl
+    B(d) + B(l) <-> B(d!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###5ee
+    B(e) + B(e) <-> B(e!1).B(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###6ef
+    B(e) + B(f) <-> B(e!1).B(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7eg
+    B(e) + B(g) <-> B(e!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8eh
+    B(e) + B(h) <-> B(e!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9ei
+    B(e) + B(i) <-> B(e!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10ej
+    B(e) + B(j) <-> B(e!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11ek
+    B(e) + B(k) <-> B(e!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12el
+    B(e) + B(l) <-> B(e!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###6ff
+    B(f) + B(f) <-> B(f!1).B(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7fg
+    B(f) + B(g) <-> B(f!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8fh
+    B(f) + B(h) <-> B(f!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9fi
+    B(f) + B(i) <-> B(f!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10fj
+    B(f) + B(j) <-> B(f!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11fk
+    B(f) + B(k) <-> B(f!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12fl
+    B(f) + B(l) <-> B(f!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###7gg
+    B(g) + B(g) <-> B(g!1).B(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8gh
+    B(g) + B(h) <-> B(g!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9gi
+    B(g) + B(i) <-> B(g!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10gj
+    B(g) + B(j) <-> B(g!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11gk
+    B(g) + B(k) <-> B(g!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12gl
+    B(g) + B(l) <-> B(g!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###8hh
+    B(h) + B(h) <-> B(h!1).B(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9hi
+    B(h) + B(i) <-> B(h!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10hj
+    B(h) + B(j) <-> B(h!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11hk
+    B(h) + B(k) <-> B(h!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12hl
+    B(h) + B(l) <-> B(h!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###9ii
+    B(i) + B(i) <-> B(i!1).B(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10ij
+    B(i) + B(j) <-> B(i!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11ik
+    B(i) + B(k) <-> B(i!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12il
+    B(i) + B(l) <-> B(i!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###10jj
+    B(j) + B(j) <-> B(j!1).B(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11jk
+    B(j) + B(k) <-> B(j!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12jl
+    B(j) + B(l) <-> B(j!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###11kk
+    B(k) + B(k) <-> B(k!1).B(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12kl
+    B(k) + B(l) <-> B(k!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BB
+    ###12ll
+    B(l) + B(l) <-> B(l!1).B(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1aa
+    A(a) + C(a) <-> A(a!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2ab
+    A(a) + C(b) <-> A(a!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3ac
+    A(a) + C(c) <-> A(a!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4ad
+    A(a) + C(d) <-> A(a!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5ae
+    A(a) + C(e) <-> A(a!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6af
+    A(a) + C(f) <-> A(a!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7ag
+    A(a) + C(g) <-> A(a!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8ah
+    A(a) + C(h) <-> A(a!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9ai
+    A(a) + C(i) <-> A(a!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10aj
+    A(a) + C(j) <-> A(a!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11ak
+    A(a) + C(k) <-> A(a!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12al
+    A(a) + C(l) <-> A(a!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ba
+    A(b) + C(a) <-> A(b!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2bb
+    A(b) + C(b) <-> A(b!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3bc
+    A(b) + C(c) <-> A(b!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4bd
+    A(b) + C(d) <-> A(b!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5be
+    A(b) + C(e) <-> A(b!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6bf
+    A(b) + C(f) <-> A(b!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7bg
+    A(b) + C(g) <-> A(b!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8bh
+    A(b) + C(h) <-> A(b!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9bi
+    A(b) + C(i) <-> A(b!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10bj
+    A(b) + C(j) <-> A(b!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11bk
+    A(b) + C(k) <-> A(b!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12bl
+    A(b) + C(l) <-> A(b!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ca
+    A(c) + C(a) <-> A(c!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2cb
+    A(c) + C(b) <-> A(c!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3cc
+    A(c) + C(c) <-> A(c!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4cd
+    A(c) + C(d) <-> A(c!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5ce
+    A(c) + C(e) <-> A(c!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6cf
+    A(c) + C(f) <-> A(c!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7cg
+    A(c) + C(g) <-> A(c!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8ch
+    A(c) + C(h) <-> A(c!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9ci
+    A(c) + C(i) <-> A(c!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10cj
+    A(c) + C(j) <-> A(c!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11ck
+    A(c) + C(k) <-> A(c!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12cl
+    A(c) + C(l) <-> A(c!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1da
+    A(d) + C(a) <-> A(d!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2db
+    A(d) + C(b) <-> A(d!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3dc
+    A(d) + C(c) <-> A(d!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4dd
+    A(d) + C(d) <-> A(d!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5de
+    A(d) + C(e) <-> A(d!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6df
+    A(d) + C(f) <-> A(d!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7dg
+    A(d) + C(g) <-> A(d!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8dh
+    A(d) + C(h) <-> A(d!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9di
+    A(d) + C(i) <-> A(d!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10dj
+    A(d) + C(j) <-> A(d!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11dk
+    A(d) + C(k) <-> A(d!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12dl
+    A(d) + C(l) <-> A(d!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ea
+    A(e) + C(a) <-> A(e!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2eb
+    A(e) + C(b) <-> A(e!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3ec
+    A(e) + C(c) <-> A(e!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4ed
+    A(e) + C(d) <-> A(e!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5ee
+    A(e) + C(e) <-> A(e!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6ef
+    A(e) + C(f) <-> A(e!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7eg
+    A(e) + C(g) <-> A(e!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8eh
+    A(e) + C(h) <-> A(e!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9ei
+    A(e) + C(i) <-> A(e!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10ej
+    A(e) + C(j) <-> A(e!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11ek
+    A(e) + C(k) <-> A(e!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12el
+    A(e) + C(l) <-> A(e!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1fa
+    A(f) + C(a) <-> A(f!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2fb
+    A(f) + C(b) <-> A(f!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3fc
+    A(f) + C(c) <-> A(f!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4fd
+    A(f) + C(d) <-> A(f!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5fe
+    A(f) + C(e) <-> A(f!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6ff
+    A(f) + C(f) <-> A(f!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7fg
+    A(f) + C(g) <-> A(f!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8fh
+    A(f) + C(h) <-> A(f!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9fi
+    A(f) + C(i) <-> A(f!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10fj
+    A(f) + C(j) <-> A(f!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11fk
+    A(f) + C(k) <-> A(f!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12fl
+    A(f) + C(l) <-> A(f!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ga
+    A(g) + C(a) <-> A(g!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2gb
+    A(g) + C(b) <-> A(g!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3gc
+    A(g) + C(c) <-> A(g!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4gd
+    A(g) + C(d) <-> A(g!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5ge
+    A(g) + C(e) <-> A(g!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6gf
+    A(g) + C(f) <-> A(g!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7gg
+    A(g) + C(g) <-> A(g!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8gh
+    A(g) + C(h) <-> A(g!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9gi
+    A(g) + C(i) <-> A(g!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10gj
+    A(g) + C(j) <-> A(g!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11gk
+    A(g) + C(k) <-> A(g!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12gl
+    A(g) + C(l) <-> A(g!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ha
+    A(h) + C(a) <-> A(h!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2hb
+    A(h) + C(b) <-> A(h!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3hc
+    A(h) + C(c) <-> A(h!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4hd
+    A(h) + C(d) <-> A(h!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5he
+    A(h) + C(e) <-> A(h!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6hf
+    A(h) + C(f) <-> A(h!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7hg
+    A(h) + C(g) <-> A(h!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8hh
+    A(h) + C(h) <-> A(h!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9hi
+    A(h) + C(i) <-> A(h!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10hj
+    A(h) + C(j) <-> A(h!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11hk
+    A(h) + C(k) <-> A(h!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12hl
+    A(h) + C(l) <-> A(h!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ia
+    A(i) + C(a) <-> A(i!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2ib
+    A(i) + C(b) <-> A(i!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3ic
+    A(i) + C(c) <-> A(i!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4id
+    A(i) + C(d) <-> A(i!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5ie
+    A(i) + C(e) <-> A(i!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6if
+    A(i) + C(f) <-> A(i!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7ig
+    A(i) + C(g) <-> A(i!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8ih
+    A(i) + C(h) <-> A(i!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9ii
+    A(i) + C(i) <-> A(i!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10ij
+    A(i) + C(j) <-> A(i!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11ik
+    A(i) + C(k) <-> A(i!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12il
+    A(i) + C(l) <-> A(i!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ja
+    A(j) + C(a) <-> A(j!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2jb
+    A(j) + C(b) <-> A(j!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3jc
+    A(j) + C(c) <-> A(j!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4jd
+    A(j) + C(d) <-> A(j!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5je
+    A(j) + C(e) <-> A(j!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6jf
+    A(j) + C(f) <-> A(j!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7jg
+    A(j) + C(g) <-> A(j!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8jh
+    A(j) + C(h) <-> A(j!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9ji
+    A(j) + C(i) <-> A(j!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10jj
+    A(j) + C(j) <-> A(j!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11jk
+    A(j) + C(k) <-> A(j!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12jl
+    A(j) + C(l) <-> A(j!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1ka
+    A(k) + C(a) <-> A(k!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2kb
+    A(k) + C(b) <-> A(k!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3kc
+    A(k) + C(c) <-> A(k!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4kd
+    A(k) + C(d) <-> A(k!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5ke
+    A(k) + C(e) <-> A(k!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6kf
+    A(k) + C(f) <-> A(k!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7kg
+    A(k) + C(g) <-> A(k!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8kh
+    A(k) + C(h) <-> A(k!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9ki
+    A(k) + C(i) <-> A(k!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10kj
+    A(k) + C(j) <-> A(k!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11kk
+    A(k) + C(k) <-> A(k!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12kl
+    A(k) + C(l) <-> A(k!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###1la
+    A(l) + C(a) <-> A(l!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###2lb
+    A(l) + C(b) <-> A(l!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###3lc
+    A(l) + C(c) <-> A(l!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###4ld
+    A(l) + C(d) <-> A(l!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###5le
+    A(l) + C(e) <-> A(l!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###6lf
+    A(l) + C(f) <-> A(l!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###7lg
+    A(l) + C(g) <-> A(l!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###8lh
+    A(l) + C(h) <-> A(l!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###9li
+    A(l) + C(i) <-> A(l!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###10lj
+    A(l) + C(j) <-> A(l!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###11lk
+    A(l) + C(k) <-> A(l!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########AC
+    ###12ll
+    A(l) + C(l) <-> A(l!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1aa
+    B(a) + C(a) <-> B(a!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2ab
+    B(a) + C(b) <-> B(a!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3ac
+    B(a) + C(c) <-> B(a!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4ad
+    B(a) + C(d) <-> B(a!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5ae
+    B(a) + C(e) <-> B(a!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6af
+    B(a) + C(f) <-> B(a!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7ag
+    B(a) + C(g) <-> B(a!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8ah
+    B(a) + C(h) <-> B(a!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9ai
+    B(a) + C(i) <-> B(a!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10aj
+    B(a) + C(j) <-> B(a!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11ak
+    B(a) + C(k) <-> B(a!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12al
+    B(a) + C(l) <-> B(a!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ba
+    B(b) + C(a) <-> B(b!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2bb
+    B(b) + C(b) <-> B(b!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3bc
+    B(b) + C(c) <-> B(b!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4bd
+    B(b) + C(d) <-> B(b!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5be
+    B(b) + C(e) <-> B(b!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6bf
+    B(b) + C(f) <-> B(b!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7bg
+    B(b) + C(g) <-> B(b!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8bh
+    B(b) + C(h) <-> B(b!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9bi
+    B(b) + C(i) <-> B(b!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10bj
+    B(b) + C(j) <-> B(b!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11bk
+    B(b) + C(k) <-> B(b!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12bl
+    B(b) + C(l) <-> B(b!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ca
+    B(c) + C(a) <-> B(c!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2cb
+    B(c) + C(b) <-> B(c!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3cc
+    B(c) + C(c) <-> B(c!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4cd
+    B(c) + C(d) <-> B(c!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5ce
+    B(c) + C(e) <-> B(c!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6cf
+    B(c) + C(f) <-> B(c!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7cg
+    B(c) + C(g) <-> B(c!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8ch
+    B(c) + C(h) <-> B(c!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9ci
+    B(c) + C(i) <-> B(c!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10cj
+    B(c) + C(j) <-> B(c!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11ck
+    B(c) + C(k) <-> B(c!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12cl
+    B(c) + C(l) <-> B(c!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1da
+    B(d) + C(a) <-> B(d!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2db
+    B(d) + C(b) <-> B(d!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3dc
+    B(d) + C(c) <-> B(d!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4dd
+    B(d) + C(d) <-> B(d!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5de
+    B(d) + C(e) <-> B(d!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6df
+    B(d) + C(f) <-> B(d!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7dg
+    B(d) + C(g) <-> B(d!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8dh
+    B(d) + C(h) <-> B(d!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9di
+    B(d) + C(i) <-> B(d!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10dj
+    B(d) + C(j) <-> B(d!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11dk
+    B(d) + C(k) <-> B(d!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12dl
+    B(d) + C(l) <-> B(d!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ea
+    B(e) + C(a) <-> B(e!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2eb
+    B(e) + C(b) <-> B(e!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3ec
+    B(e) + C(c) <-> B(e!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4ed
+    B(e) + C(d) <-> B(e!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5ee
+    B(e) + C(e) <-> B(e!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6ef
+    B(e) + C(f) <-> B(e!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7eg
+    B(e) + C(g) <-> B(e!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8eh
+    B(e) + C(h) <-> B(e!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9ei
+    B(e) + C(i) <-> B(e!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10ej
+    B(e) + C(j) <-> B(e!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11ek
+    B(e) + C(k) <-> B(e!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12el
+    B(e) + C(l) <-> B(e!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1fa
+    B(f) + C(a) <-> B(f!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2fb
+    B(f) + C(b) <-> B(f!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3fc
+    B(f) + C(c) <-> B(f!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4fd
+    B(f) + C(d) <-> B(f!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5fe
+    B(f) + C(e) <-> B(f!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6ff
+    B(f) + C(f) <-> B(f!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7fg
+    B(f) + C(g) <-> B(f!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8fh
+    B(f) + C(h) <-> B(f!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9fi
+    B(f) + C(i) <-> B(f!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10fj
+    B(f) + C(j) <-> B(f!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11fk
+    B(f) + C(k) <-> B(f!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12fl
+    B(f) + C(l) <-> B(f!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ga
+    B(g) + C(a) <-> B(g!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2gb
+    B(g) + C(b) <-> B(g!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3gc
+    B(g) + C(c) <-> B(g!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4gd
+    B(g) + C(d) <-> B(g!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5ge
+    B(g) + C(e) <-> B(g!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6gf
+    B(g) + C(f) <-> B(g!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7gg
+    B(g) + C(g) <-> B(g!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8gh
+    B(g) + C(h) <-> B(g!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9gi
+    B(g) + C(i) <-> B(g!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10gj
+    B(g) + C(j) <-> B(g!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11gk
+    B(g) + C(k) <-> B(g!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12gl
+    B(g) + C(l) <-> B(g!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ha
+    B(h) + C(a) <-> B(h!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2hb
+    B(h) + C(b) <-> B(h!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3hc
+    B(h) + C(c) <-> B(h!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4hd
+    B(h) + C(d) <-> B(h!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5he
+    B(h) + C(e) <-> B(h!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6hf
+    B(h) + C(f) <-> B(h!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7hg
+    B(h) + C(g) <-> B(h!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8hh
+    B(h) + C(h) <-> B(h!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9hi
+    B(h) + C(i) <-> B(h!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10hj
+    B(h) + C(j) <-> B(h!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11hk
+    B(h) + C(k) <-> B(h!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12hl
+    B(h) + C(l) <-> B(h!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ia
+    B(i) + C(a) <-> B(i!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2ib
+    B(i) + C(b) <-> B(i!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3ic
+    B(i) + C(c) <-> B(i!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4id
+    B(i) + C(d) <-> B(i!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5ie
+    B(i) + C(e) <-> B(i!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6if
+    B(i) + C(f) <-> B(i!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7ig
+    B(i) + C(g) <-> B(i!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8ih
+    B(i) + C(h) <-> B(i!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9ii
+    B(i) + C(i) <-> B(i!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10ij
+    B(i) + C(j) <-> B(i!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11ik
+    B(i) + C(k) <-> B(i!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12il
+    B(i) + C(l) <-> B(i!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ja
+    B(j) + C(a) <-> B(j!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2jb
+    B(j) + C(b) <-> B(j!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3jc
+    B(j) + C(c) <-> B(j!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4jd
+    B(j) + C(d) <-> B(j!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5je
+    B(j) + C(e) <-> B(j!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6jf
+    B(j) + C(f) <-> B(j!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7jg
+    B(j) + C(g) <-> B(j!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8jh
+    B(j) + C(h) <-> B(j!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9ji
+    B(j) + C(i) <-> B(j!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10jj
+    B(j) + C(j) <-> B(j!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11jk
+    B(j) + C(k) <-> B(j!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12jl
+    B(j) + C(l) <-> B(j!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1ka
+    B(k) + C(a) <-> B(k!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2kb
+    B(k) + C(b) <-> B(k!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3kc
+    B(k) + C(c) <-> B(k!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4kd
+    B(k) + C(d) <-> B(k!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5ke
+    B(k) + C(e) <-> B(k!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6kf
+    B(k) + C(f) <-> B(k!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7kg
+    B(k) + C(g) <-> B(k!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8kh
+    B(k) + C(h) <-> B(k!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9ki
+    B(k) + C(i) <-> B(k!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10kj
+    B(k) + C(j) <-> B(k!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11kk
+    B(k) + C(k) <-> B(k!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12kl
+    B(k) + C(l) <-> B(k!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###1la
+    B(l) + C(a) <-> B(l!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###2lb
+    B(l) + C(b) <-> B(l!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###3lc
+    B(l) + C(c) <-> B(l!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###4ld
+    B(l) + C(d) <-> B(l!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###5le
+    B(l) + C(e) <-> B(l!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###6lf
+    B(l) + C(f) <-> B(l!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###7lg
+    B(l) + C(g) <-> B(l!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###8lh
+    B(l) + C(h) <-> B(l!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###9li
+    B(l) + C(i) <-> B(l!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###10lj
+    B(l) + C(j) <-> B(l!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###11lk
+    B(l) + C(k) <-> B(l!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########BC
+    ###12ll
+    B(l) + C(l) <-> B(l!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###1aa
+    C(a) + C(a) <-> C(a!1).C(a!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###2ab
+    C(a) + C(b) <-> C(a!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###3ac
+    C(a) + C(c) <-> C(a!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###4ad
+    C(a) + C(d) <-> C(a!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###5ae
+    C(a) + C(e) <-> C(a!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###6af
+    C(a) + C(f) <-> C(a!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7ag
+    C(a) + C(g) <-> C(a!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8ah
+    C(a) + C(h) <-> C(a!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9ai
+    C(a) + C(i) <-> C(a!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10aj
+    C(a) + C(j) <-> C(a!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11ak
+    C(a) + C(k) <-> C(a!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12al
+    C(a) + C(l) <-> C(a!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###2bb
+    C(b) + C(b) <-> C(b!1).C(b!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###3bc
+    C(b) + C(c) <-> C(b!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###4bd
+    C(b) + C(d) <-> C(b!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###5be
+    C(b) + C(e) <-> C(b!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###6bf
+    C(b) + C(f) <-> C(b!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7bg
+    C(b) + C(g) <-> C(b!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8bh
+    C(b) + C(h) <-> C(b!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9bi
+    C(b) + C(i) <-> C(b!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10bj
+    C(b) + C(j) <-> C(b!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11bk
+    C(b) + C(k) <-> C(b!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12bl
+    C(b) + C(l) <-> C(b!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###3cc
+    C(c) + C(c) <-> C(c!1).C(c!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###4cd
+    C(c) + C(d) <-> C(c!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###5ce
+    C(c) + C(e) <-> C(c!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###6cf
+    C(c) + C(f) <-> C(c!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7cg
+    C(c) + C(g) <-> C(c!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8ch
+    C(c) + C(h) <-> C(c!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9ci
+    C(c) + C(i) <-> C(c!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10cj
+    C(c) + C(j) <-> C(c!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11ck
+    C(c) + C(k) <-> C(c!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12cl
+    C(c) + C(l) <-> C(c!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###4dd
+    C(d) + C(d) <-> C(d!1).C(d!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###5de
+    C(d) + C(e) <-> C(d!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###6df
+    C(d) + C(f) <-> C(d!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7dg
+    C(d) + C(g) <-> C(d!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8dh
+    C(d) + C(h) <-> C(d!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9di
+    C(d) + C(i) <-> C(d!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10dj
+    C(d) + C(j) <-> C(d!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11dk
+    C(d) + C(k) <-> C(d!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12dl
+    C(d) + C(l) <-> C(d!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###5ee
+    C(e) + C(e) <-> C(e!1).C(e!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###6ef
+    C(e) + C(f) <-> C(e!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7eg
+    C(e) + C(g) <-> C(e!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8eh
+    C(e) + C(h) <-> C(e!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9ei
+    C(e) + C(i) <-> C(e!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10ej
+    C(e) + C(j) <-> C(e!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11ek
+    C(e) + C(k) <-> C(e!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12el
+    C(e) + C(l) <-> C(e!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###6ff
+    C(f) + C(f) <-> C(f!1).C(f!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7fg
+    C(f) + C(g) <-> C(f!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8fh
+    C(f) + C(h) <-> C(f!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9fi
+    C(f) + C(i) <-> C(f!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10fj
+    C(f) + C(j) <-> C(f!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11fk
+    C(f) + C(k) <-> C(f!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12fl
+    C(f) + C(l) <-> C(f!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###7gg
+    C(g) + C(g) <-> C(g!1).C(g!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8gh
+    C(g) + C(h) <-> C(g!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9gi
+    C(g) + C(i) <-> C(g!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10gj
+    C(g) + C(j) <-> C(g!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11gk
+    C(g) + C(k) <-> C(g!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12gl
+    C(g) + C(l) <-> C(g!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###8hh
+    C(h) + C(h) <-> C(h!1).C(h!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9hi
+    C(h) + C(i) <-> C(h!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10hj
+    C(h) + C(j) <-> C(h!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11hk
+    C(h) + C(k) <-> C(h!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12hl
+    C(h) + C(l) <-> C(h!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###9ii
+    C(i) + C(i) <-> C(i!1).C(i!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10ij
+    C(i) + C(j) <-> C(i!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11ik
+    C(i) + C(k) <-> C(i!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12il
+    C(i) + C(l) <-> C(i!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###10jj
+    C(j) + C(j) <-> C(j!1).C(j!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11jk
+    C(j) + C(k) <-> C(j!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12jl
+    C(j) + C(l) <-> C(j!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###11kk
+    C(k) + C(k) <-> C(k!1).C(k!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12kl
+    C(k) + C(l) <-> C(k!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+    ########CC
+    ###12ll
+    C(l) + C(l) <-> C(l!1).C(l!1)
+    onRate3Dka = 10  # AA
+    offRatekb = 5
+    norm1 = [0, 0, 1]
+    norm2 = [0, 0, 1]
+    sigma = 1000
+    assocAngles = [nan, nan, nan, nan, nan]
+    bindRadSameCom = 1.1
+    excludeVolumeBound = True
+
+end reactions
