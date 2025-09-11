@@ -1,4 +1,4 @@
-We use single_component.inp to denote the setup for 2014 particle A and 2014 particle B aggregation within a 100*100*100 um^3.
+We use single_component.inp to denote the setup for 2014 particle A and 2014 particle B aggregation within a 100*100*100 um^3 box boundary.
 
 
 
