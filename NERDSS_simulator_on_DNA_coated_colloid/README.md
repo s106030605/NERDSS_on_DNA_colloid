@@ -1,5 +1,5 @@
 # nerdss
-Software for structure-resolved RD
+
 
 1. To compile the code and install the simualtor, see INSTALL
 
