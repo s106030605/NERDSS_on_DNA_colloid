@@ -7,6 +7,6 @@
   https://github.com/mjohn218/NERDSS 
 
 ## File Description
-- NERDSS_simulator_on_DNA_coated_colloid contains the simualtor installation and simualtion examples. Please see the /NERDSS_simulator_on_DNA_coated_colloid/README.md for detail. 
-- Nerdss_initial_configuration is about the seesion: 'assembly design protocol exploration' in A_simulation_that_recapitulates_the_dynamics_of_PER_directed_micron_scale_colloidal_assembly.pdf. Specifically, we can screen various assembly protocol by performing simulation with specifying the initial configuration of the particles.
+- NERDSS_simulator_on_DNA_coated_colloid contains the simualtor installation and simualtion examples. Please see the /NERDSS_simulator_on_DNA_coated_colloid/README.md for details. 
+- Nerdss_initial_configuration is about the seesion: 'assembly design protocol exploration' in A_simulation_that_recapitulates_the_dynamics_of_PER_directed_micron_scale_colloidal_assembly.pdf. Specifically, we can screen various assembly protocol by performing simulation with specifying the initial configuration of the particles. Please see the /Nerdss_initial_configuration/README.md for details. 
 
