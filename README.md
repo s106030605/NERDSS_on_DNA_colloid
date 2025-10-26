@@ -27,11 +27,10 @@ https://github.com/mjohn218/NERDSS
 
 
 
-⦁	Experiments\\Data\_Raw includes the raw microscope image data for delayed aggregation and multi-stage assembly. 
+
 
 ⦁	Experiments\\Matlab\_Analysis shows the MATLAB code used for image analysis. 
 
-⦁	Experiments\\Data\_from\_simulation shows the image generated from simulation, for the comparison between simulations and experiments. 
 
 
 
