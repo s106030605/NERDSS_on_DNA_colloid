@@ -1,13 +1,54 @@
-# DNA coated colloid aggregation simulator
+# DNA-coated colloid multi-stage assembly
+
 ## Project Description
 
 
-- We modified and used NERDSS simulator to understand DNA-coated colloid aggregation. NERDSS is a Structure-Resolved Reaction-Diffusion simulator developed by Johnson Lab, Biophysics, Johns Hopkins University.
-  Varga, Matthew J., et al. "NERDSS: a nonequilibrium simulator for multibody self-assembly at the cellular scale." Biophysical Journal 118.12 (2020): 3026-3040.
-  https://github.com/mjohn218/NERDSS
-- For NERDSS DNA coated colloid simulator modification, please see A_simulation_that_recapitulates_the_dynamics_of_PER_directed_micron_scale_colloidal_assembly.pdf. 
+
+⦁	This project includes supplementary files for DNA-coated colloid multi-stage assembly. Files are categorized into Experiments and Simulation, primarily for 2 works, although some files were exchanged for comparison. 1. A DNA-encoded recipe to direct multi-stage colloidal assembly, and 2 A simulation that recapitulate the dynamics of PER-directed colloidal assembly. Please see the paper pdf for details.
+
+
+
+
+
+
+
+⦁	Our DNA-coated colloid aggregation simulator was modified based on NERDSS simulator. NERDSS is a Structure-Resolved Reaction-Diffusion simulator developed by Johnson Lab, Biophysics, Johns Hopkins University. Varga, Matthew J., et al. "NERDSS: a nonequilibrium simulator for multibody self-assembly at the cellular scale." Biophysical Journal 118.12 (2020): 3026-3040.
+https://github.com/mjohn218/NERDSS
+
+
+
+
+
+
 
 ## File Description
-- NERDSS_simulator_on_DNA_coated_colloid contains the simualtor installation and simualtion examples. Please see the /NERDSS_simulator_on_DNA_coated_colloid/README.md for details. 
-- Nerdss_initial_configuration is about the seesion: 'assembly design protocol exploration' in A_simulation_that_recapitulates_the_dynamics_of_PER_directed_micron_scale_colloidal_assembly.pdf. Specifically, we can screen various assembly protocol by performing simulation with specifying the initial configuration of the particles. Please see the /Nerdss_initial_configuration/README.md for details. 
+
+
+
+
+
+⦁	Experiments\\Data\_Raw includes the raw microscope image data for delayed aggregation and multi-stage assembly. 
+
+⦁	Experiments\\Matlab\_Analysis shows the MATLAB code used for image analysis. 
+
+⦁	Experiments\\Data\_from\_simulation shows the image generated from simulation, for the comparison between simulations and experiments. 
+
+
+
+⦁	Simulations\\NERDSS\_simulator\_primary includes the simulator for DNA-coated colloid aggregation. The installation guide and simulation examples are also attached. Please see the /NERDSS\_simulator\_primary/README.md for details.
+
+⦁	Simulations\\NERDSS\_simulator\_particles\_configuration\_intialization is about the session: 'assembly design protocol exploration' in A\_simulation\_that\_recapitulates\_the\_dynamics\_of\_PER\_directed\_micron\_scale\_colloidal\_assembly.pdf. Specifically, we can screen various assembly protocol by performing simulation with particles configuration initialization. Please see the /NERDSS\_simulator\_particles\_configuration\_intialization/README.md for details.
+
+
+
+
+
+
+
+* We modified and used NERDSS simulator to understand DNA-coated colloid aggregation. NERDSS is a Structure-Resolved Reaction-Diffusion simulator developed by Johnson Lab, Biophysics, Johns Hopkins University.
+  Varga, Matthew J., et al. "NERDSS: a nonequilibrium simulator for multibody self-assembly at the cellular scale." Biophysical Journal 118.12 (2020): 3026-3040.
+  https://github.com/mjohn218/NERDSS
+* For NERDSS DNA coated colloid simulator modification, please see A\_simulation\_that\_recapitulates\_the\_dynamics\_of\_PER\_directed\_micron\_scale\_colloidal\_assembly.pdf.
+
+
 
