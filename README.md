@@ -14,6 +14,8 @@
 
 ⦁	Our DNA-coated colloid aggregation simulator was modified based on NERDSS simulator. NERDSS is a Structure-Resolved Reaction-Diffusion simulator developed by Johnson Lab, Biophysics, Johns Hopkins University. Varga, Matthew J., et al. "NERDSS: a nonequilibrium simulator for multibody self-assembly at the cellular scale." Biophysical Journal 118.12 (2020): 3026-3040.
 https://github.com/mjohn218/NERDSS
+* For NERDSS DNA coated colloid simulator modification, please see A\_simulation\_that\_recapitulates\_the\_dynamics\_of\_PER\_directed\_micron\_scale\_colloidal\_assembly.pdf.
+
 
 
 
@@ -43,11 +45,6 @@ https://github.com/mjohn218/NERDSS
 
 
 
-
-* We modified and used NERDSS simulator to understand DNA-coated colloid aggregation. NERDSS is a Structure-Resolved Reaction-Diffusion simulator developed by Johnson Lab, Biophysics, Johns Hopkins University.
-  Varga, Matthew J., et al. "NERDSS: a nonequilibrium simulator for multibody self-assembly at the cellular scale." Biophysical Journal 118.12 (2020): 3026-3040.
-  https://github.com/mjohn218/NERDSS
-* For NERDSS DNA coated colloid simulator modification, please see A\_simulation\_that\_recapitulates\_the\_dynamics\_of\_PER\_directed\_micron\_scale\_colloidal\_assembly.pdf.
 
 
 
