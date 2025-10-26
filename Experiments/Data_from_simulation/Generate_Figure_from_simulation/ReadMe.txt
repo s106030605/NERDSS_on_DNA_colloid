@@ -1,0 +1,1 @@
+The snapshots in Fig. 5 were created from the particle configuration file using Ovito, a 3D visualization tool. The images were rendered from both top and side viewpoints.
